@@ -5,11 +5,11 @@ export type ResourceEvent = { lng: any; ns: any };
 export type MissingKeyEvent = { lngs: any; namespace: any; key: any; res: any };
 
 export interface ITranslationEvents {
-  initialized: BehaviorSubject<i18n.InitOptions | undefined>;
+  initialized: BehaviorSubject<i18n.InitOptions>;
   loaded: BehaviorSubject<boolean>;
   failedLoading: Subject<any>;
   missingKey: Subject<MissingKeyEvent>;
   added: Subject<ResourceEvent>;
   removed: Subject<ResourceEvent>;
-  languageChanged: BehaviorSubject<string | null>;
+  languageChanged: BehaviorSubject<string>;
 }
